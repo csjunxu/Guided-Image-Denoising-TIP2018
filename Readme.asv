@@ -26,11 +26,6 @@ The function "Demo_Guided" demonstrates real-world image denoising with
 The function "Demo_Guided_NoGT" demonstrates real-world image denoising 
 without "ground truth" by the Guided Image Denoising method introduced in the paper.
 
-Model
-------------
-The trained model "PGGMM_RGB_6x6_3_win15_nlsp10_delta0.001_cls33.mat" can be downloaded from
-https://github.com/csjunxu/GID_TIP2018/PG-GMM_TrainingCode
-
 Data
 ------------
 Please download the data from corresponding addresses.
@@ -49,10 +44,12 @@ The "CCImages" directory include two parts:
                                                 The *ours.png are images denoised by CC.
 4. CC60: 60 cropped (by us) real-world noisy images from CC [1]. 
                         "CC_60MeanImage" inlcudes the "ground truth" images;
-                        "CC_60NoisyImage" inlcudes the noisy images;
-5. PolyUImages: 100 cropped images from our new dataset.
-                                                The *real.JPG are noisy images;
-                                                The *mean.JPG are "ground truth" images;
+                        "CC_60NoisyImage" inlcudes
+                        ''Real_ccnoise_denoised_part'' of 
+                        https://github.com/csjunxu/MCWNNM_ICCV2017
+                                                The *real.png are noisy images;
+                                                The *mean.png are "ground truth" images;
+                                                The *ours.png are images denoised by CC.
 
 [1] A Holistic Approach to Cross-Channel Image Noise Modeling and its Application to Image Denoising. 
      Seonghyeon Nam*, Youngbae Hwang*, Yasuyuki Matsushita, Seon Joo Kim, CVPR, 2016.
