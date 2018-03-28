@@ -13,6 +13,9 @@ Please see the file License.txt for the license governing this code.
   Contact:       Jun Xu <csjunxu@comp.polyu.edu.hk/nankaimathxujun@gmail.com>
 % ===============================================================
 
+Note
+------------
+Please refer to https://github.com/csjunxu/GID_TIP2018 for the updates of the code.
 
 Overview
 ------------
@@ -73,7 +76,6 @@ The "CCImages" directory include two parts:
 Dependency
 ------------
 This code is implemented purely in Matlab2014b and doesn't depends on any other toolbox.
-
 
 
 Contact
