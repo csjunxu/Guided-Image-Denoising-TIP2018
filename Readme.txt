@@ -2,7 +2,7 @@
 The code in this package implements the Guided Image Denoising method for
 image denoising as described in the following paper:
 
-  Jun Xu, Lei Zhang, Wangmeng Zuo, David Zhang, and Xiangchu Feng,
+  Jun Xu, Lei Zhang, and David Zhang
   External Prior Guided Internal Prior Learning for Real-World Noisy Image Denoising.
   IEEE Transactions on Image Processing (TIP), 2018.
 
