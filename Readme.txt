@@ -6,8 +6,8 @@ image denoising as described in the following paper:
   External Prior Guided Internal Prior Learning for Real-World Noisy Image Denoising.
   IEEE Transactions on Image Processing (TIP), 2018.
 
-Please cite the paper if you are using this code in your research.
-Please see the file License.txt for the license governing this code.
+  Please cite the paper if you are using this code in your research.
+  Please see the file License.txt for the license governing this code.
 
   Version:       1.0 (03/28/2018), see ChangeLog.txt
   Contact:       Jun Xu <csjunxu@comp.polyu.edu.hk/nankaimathxujun@gmail.com>
