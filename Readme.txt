@@ -33,6 +33,7 @@ Please download the data from corresponding addresses.
                         This dataset can be found at http://r0k.us/graphics/kodak/
 2. NCImages: real-world noisy images with no ''ground truth'' from "NoiseClinic"
                         This dataset can be found at http://demo.ipol.im/demo/125/
+The "CCImages" directory include two parts:
 3. CC15: 15 cropped real-world noisy images from CC [1]. 
                         This dataset can be found at  http://snam.ml/research/ccnoise
                         The smaller 15 cropped images can be found on in the directory 
@@ -41,8 +42,8 @@ Please download the data from corresponding addresses.
                                                 The *real.png are noisy images;
                                                 The *mean.png are "ground truth" images;
                                                 The *ours.png are images denoised by CC.
-3. CC60: 60 cropped real-world noisy images from CC [1]. 
-                        This dataset can be found at  http://snam.ml/research/ccnoise
+4. CC60: 60 cropped (by us) real-world noisy images from CC [1]. 
+                        CC_60MeanImage inlcude the "ground truth" images;
                         The smaller 15 cropped images can be found on in the directory 
                         ''Real_ccnoise_denoised_part'' of 
                         https://github.com/csjunxu/MCWNNM_ICCV2017

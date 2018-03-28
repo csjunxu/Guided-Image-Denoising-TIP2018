@@ -1,23 +1,23 @@
 clear;
 %% 15 images of CC dataset
 dataset = 'CC15';
-GT_Original_image_dir = 'C:\Users\csjunxu\Desktop\CVPR2018 Denoising\cc_Results\Real_ccnoise_denoised_part\';
+GT_Original_image_dir = 'CCImages/CC15/';
 GT_fpath = fullfile(GT_Original_image_dir, '*mean.png');
-TT_Original_image_dir = 'C:\Users\csjunxu\Desktop\CVPR2018 Denoising\cc_Results\Real_ccnoise_denoised_part\';
+TT_Original_image_dir = 'CCImages/CC15/';
 TT_fpath = fullfile(TT_Original_image_dir, '*real.png');
 
 %% 60 images of CC dataset
 % dataset = 'CC60';
-% GT_Original_image_dir = 'C:\Users\csjunxu\Desktop\CVPR2018 Denoising\cc_Results\CC_60MeanImage\';
+% GT_Original_image_dir = 'CCImages/CC_60MeanImage/';
 % GT_fpath = fullfile(GT_Original_image_dir, '*.png');
-% TT_Original_image_dir = 'C:\Users\csjunxu\Desktop\CVPR2018 Denoising\cc_Results\CC_60NoisyImage\';
+% TT_Original_image_dir = 'CCImages/CC_60NoisyImage/';
 % TT_fpath = fullfile(TT_Original_image_dir, '*.png');
 
 %% 100 images of our new dataset
 % dataset = 'PolyU100';
-% GT_Original_image_dir = 'C:/Users/csjunxu/Desktop/RID_Dataset/RealisticImage/';
+% GT_Original_image_dir = 'PolyUImages/';
 % GT_fpath = fullfile(GT_Original_image_dir, '*mean.JPG');
-% TT_Original_image_dir = 'C:/Users/csjunxu/Desktop/RID_Dataset/RealisticImage/';
+% TT_Original_image_dir = 'PolyUImages/';
 % TT_fpath = fullfile(TT_Original_image_dir, '*real.JPG');
 
 GT_im_dir  = dir(GT_fpath);
@@ -25,13 +25,13 @@ TT_im_dir  = dir(TT_fpath);
 im_num = length(TT_im_dir);
 
 method = 'Guided';
-write_MAT_dir = ['C:/Users/csjunxu/Desktop/CVPR2018 Denoising/PolyU_Results/'];
-write_sRGB_dir = ['C:/Users/csjunxu/Desktop/CVPR2018 Denoising/PolyU_Results/' method];
+write_MAT_dir = [dataset '_Results/'];
+write_sRGB_dir = [write_MAT_dir method];
 if ~isdir(write_sRGB_dir)
     mkdir(write_sRGB_dir)
 end
 
-load PG-GMM_TrainingCode/PGGMM_RGB_6x6_3_win15_nlsp10_delta0.001_cls33.mat
+load PG-GMM_TrainingCode/PGGMM_RGB_6x6_3_win15_nlsp10_delta0.001_cls33.mat;
 % dictionary and regularization parameter
 par.D= GMM.D;
 par.S = GMM.S;

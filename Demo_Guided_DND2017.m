@@ -14,7 +14,7 @@ if ~isdir(write_sRGB_dir)
     mkdir(write_sRGB_dir)
 end
 
-load 'C:/Users/csjunxu/Desktop/CVPR2017_Guided/PG-GMM_TrainingCode/PGGMM_RGB_6x6_3_win15_nlsp10_delta0.001_cls33.mat';
+load PG-GMM_TrainingCode/PGGMM_RGB_6x6_3_win15_nlsp10_delta0.001_cls33.mat;
 % dictionary and regularization Parameter
 Par.D= GMM.D;
 Par.S = GMM.S;
