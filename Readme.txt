@@ -13,11 +13,14 @@ Please see the file License.txt for the license governing this code.
   Contact:       Jun Xu <csjunxu@comp.polyu.edu.hk/nankaimathxujun@gmail.com>
 % ===============================================================
 
+
 Overview
 ------------
-The code for learning Patch Group Prior is implemented in the folder "PG-GMM_TrainingCode", which relies
+Training Code:
+The code for learning external prior is provided in the folder "PG-GMM_TrainingCode", which relies
 on the training images in the subfolder "Kodak24" (please refer to the "Data" section).
 
+Testing Code:
 The function "Demo_Guided_DND2017" demonstrates real-world image denoising with the Guided Image 
 Denoising method introduced in the paper.
 
@@ -27,10 +30,12 @@ The function "Demo_Guided" demonstrates real-world image denoising with
 The function "Demo_Guided_NoGT" demonstrates real-world image denoising 
 without "ground truth" by the Guided Image Denoising method introduced in the paper.
 
+
 Model
 ------------
 The trained model "PGGMM_RGB_6x6_3_win15_nlsp10_delta0.001_cls33.mat" can be downloaded from
 https://github.com/csjunxu/GID_TIP2018/PG-GMM_TrainingCode
+
 
 Data
 ------------
@@ -64,9 +69,12 @@ The "CCImages" directory include two parts:
       Cross-Channel Image Noise Modeling and its Application to Image Denoising. CVPR, 2016.
 [2] Tobias Pl?tz and Stefan Roth. Benchmarking Denoising Algorithms with Real Photographs. CVPR, 2017.
 
+
 Dependency
 ------------
 This code is implemented purely in Matlab2014b and doesn't depends on any other toolbox.
+
+
 
 Contact
 ------------
