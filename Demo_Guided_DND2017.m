@@ -1,14 +1,14 @@
 clear;
-
-Original_image_dir = 'C:\Users\csjunxu\Desktop\CVPR2018 Denoising\dnd_2017\images_srgb\';
+dataset = 'DND_2017';
+Original_image_dir = 'DND_2017/images_srgb/';
 fpath = fullfile(Original_image_dir, '*.mat');
 im_dir  = dir(fpath);
 im_num = length(im_dir);
-load 'C:\Users\csjunxu\Desktop\CVPR2018 Denoising\dnd_2017\info.mat';
+load 'DND_2017/info.mat';
 
-method = 'Guided';
+method = 'GID';
 % write image directory
-write_MAT_dir = ['C:/Users/csjunxu/Desktop/CVPR2018 Denoising/dnd_2017Results/'];
+write_MAT_dir = [dataset '_Results/'];
 write_sRGB_dir = [write_MAT_dir method];
 if ~isdir(write_sRGB_dir)
     mkdir(write_sRGB_dir)
@@ -50,7 +50,7 @@ for i = 1:im_num
         etime(t2,t1)
         alltime(Par.image)  = etime(t2, t1);
         %% output
-        IMoutname = sprintf([write_sRGB_dir '/' method '_DND_c1_' num2str(c1) '_' IMinname '.png']);
+        IMoutname = sprintf([write_sRGB_dir '/' method '_DND_' IMinname '.png']);
         imwrite(IMout, IMoutname);
     end
 end

@@ -12,6 +12,7 @@ Please see the file License.txt for the license governing this code.
   Version:       1.0 (03/28/2018), see ChangeLog.txt
   Contact:       Jun Xu <csjunxu@comp.polyu.edu.hk/nankaimathxujun@gmail.com>
 % ===============================================================
+
 Overview
 ------------
 The code for learning Patch Group Prior is implemented in the folder "PG-GMM_TrainingCode", which relies
@@ -38,6 +39,7 @@ Please download the data from corresponding addresses.
                         This dataset can be found at http://r0k.us/graphics/kodak/
 2. NCImages: real-world noisy images with no ''ground truth'' from "NoiseClinic"
                         This dataset can be found at http://demo.ipol.im/demo/125/
+
 The "CCImages" directory include two parts:
 3. CC15: 15 cropped real-world noisy images from CC [1]. 
                         This dataset can be found at  http://snam.ml/research/ccnoise
@@ -50,13 +52,17 @@ The "CCImages" directory include two parts:
 4. CC60: 60 cropped (by us) real-world noisy images from CC [1]. 
                         "CC_60MeanImage" inlcudes the "ground truth" images;
                         "CC_60NoisyImage" inlcudes the noisy images;
-5. PolyUImages: 100 cropped images from our new dataset.
+
+5. DND_2017: 1000 cropped real-world noisy images from DND [2].
+                         Please download the dataset from https://noise.visinf.tu-darmstadt.de/
+                         and put the files in "DND_2017" directory accordingly.
+6. PolyUImages: 100 cropped images from our new dataset.
                                                 The *real.JPG are noisy images;
                                                 The *mean.JPG are "ground truth" images;
 
-[1] A Holistic Approach to Cross-Channel Image Noise Modeling and its Application to Image Denoising. 
-     Seonghyeon Nam*, Youngbae Hwang*, Yasuyuki Matsushita, Seon Joo Kim, CVPR, 2016.
-
+[1] Seonghyeon Nam*, Youngbae Hwang*, Yasuyuki Matsushita, Seon Joo Kim. A Holistic Approach to 
+      Cross-Channel Image Noise Modeling and its Application to Image Denoising. CVPR, 2016.
+[2] Tobias Pl?tz and Stefan Roth. Benchmarking Denoising Algorithms with Real Photographs. CVPR, 2017.
 
 Dependency
 ------------
@@ -65,4 +71,4 @@ This code is implemented purely in Matlab2014b and doesn't depends on any other 
 Contact
 ------------
 If you have questions, problems with the code, or find a bug, please let us know. Contact Jun Xu at 
-csjunxu@comp.polyu.edu.hk or the email provided on my website at www.wangliuqing.tk.
+csjunxu@comp.polyu.edu.hk or nankaimathxujun@gmail.com

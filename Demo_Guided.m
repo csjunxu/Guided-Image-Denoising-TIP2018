@@ -24,7 +24,7 @@ GT_im_dir  = dir(GT_fpath);
 TT_im_dir  = dir(TT_fpath);
 im_num = length(TT_im_dir);
 
-method = 'Guided';
+method = 'GID';
 write_MAT_dir = [dataset '_Results/'];
 write_sRGB_dir = [write_MAT_dir method];
 if ~isdir(write_sRGB_dir)
