@@ -71,7 +71,7 @@ for ite = 1 : Par.IteNum
         alphanew = sign(bnew).*max(abs(bnew)-lambdae,0);
         Dnew*alphanew;
         % add DC components and aggregation
-        Y_hat(:,blk_arr(:,idx)) = Y_hat(:,blk_arr(:,idx)) + bsxfun(@plus, Dnew*alphanew, DC(:,idx));
+        Y_hat(:,blk_arr(:,idx)) = Y_hat(:,blk_arr(:,idx)) + bsxfun(@plus, Dnew*alphanew, DC(:,blk_arr(:,idx)));
         W_hat(:,blk_arr(:,idx)) = W_hat(:,blk_arr(:,idx)) + ones(Par.ps2ch, length(idx));
     end
     % Reconstruction
