@@ -45,7 +45,7 @@ par.En = 54;
 if strcmp(dataset, 'CC15')==1
     par.c1 = 0.001;
 elseif strcmp(dataset, 'CC60')==1
-    par.c1 = 0.00; % 0.0016 would be better
+    par.c1 = 0.0016;
 elseif strcmp(dataset, 'PolyU100')==1
     par.c1 = 0.001;
 end
