@@ -1,17 +1,17 @@
 clear;
 %% 15 images of CC dataset
-dataset = 'CC15';
-GT_Original_image_dir = 'CCImages/CC15/';
-GT_fpath = fullfile(GT_Original_image_dir, '*mean.png');
-TT_Original_image_dir = 'CCImages/CC15/';
-TT_fpath = fullfile(TT_Original_image_dir, '*real.png');
+% dataset = 'CC15';
+% GT_Original_image_dir = 'CCImages/CC15/';
+% GT_fpath = fullfile(GT_Original_image_dir, '*mean.png');
+% TT_Original_image_dir = 'CCImages/CC15/';
+% TT_fpath = fullfile(TT_Original_image_dir, '*real.png');
 
 %% 60 images of CC dataset
-% dataset = 'CC60';
-% GT_Original_image_dir = 'CCImages/CC_60MeanImage/';
-% GT_fpath = fullfile(GT_Original_image_dir, '*.png');
-% TT_Original_image_dir = 'CCImages/CC_60NoisyImage/';
-% TT_fpath = fullfile(TT_Original_image_dir, '*.png');
+dataset = 'CC60';
+GT_Original_image_dir = 'CCImages/CC_60MeanImage/';
+GT_fpath = fullfile(GT_Original_image_dir, '*.png');
+TT_Original_image_dir = 'CCImages/CC_60NoisyImage/';
+TT_fpath = fullfile(TT_Original_image_dir, '*.png');
 
 %% 100 images of our new dataset
 % dataset = 'PolyU100';
@@ -45,7 +45,7 @@ par.En = 54;
 if strcmp(dataset, 'CC15')==1
     par.c1 = 0.001;
 elseif strcmp(dataset, 'CC60')==1
-    par.c1 = 0.001; % 0.0016 would be better
+    par.c1 = 0.00; % 0.0016 would be better
 elseif strcmp(dataset, 'PolyU100')==1
     par.c1 = 0.001;
 end

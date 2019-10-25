@@ -50,6 +50,22 @@ for ite = 1 : Par.IteNum
     % Weighted Sparse Coding
     Y_hat = zeros(Par.ps2ch,Par.maxrc,'double');
     W_hat = zeros(Par.ps2ch,Par.maxrc,'double');
+   
+       
+    for j = 1:length(seg)-1
+        idx =   s_idx(seg(j)+1:seg(j+1));
+        cls =   dicidx(idx(1));
+        D   =   par.D(:,:, cls);
+        S    = par.S(:,cls);
+        lambdaM = repmat(par.c1*sigma2I./(sqrt(S)+eps ),[1 length(idx)]);
+        Y = nDCnlX(:,idx);
+        b = D'*Y;
+        % soft threshold
+        alpha = sign(b).*max(abs(b)-lambdaM/2,0);
+        % add DC components and aggregation
+        X_hat(:,blk_arr(:,idx)) = X_hat(:,blk_arr(:,idx))+bsxfun(@plus,D*alpha, DC(:,idx));
+        W(:,blk_arr(:,idx)) = W(:,blk_arr(:,idx))+ones(par.ps2ch, length(idx));
+    end
     
     for   j = 1:length(seg)-1
         idx =   s_idx(seg(j)+1:seg(j+1));
@@ -71,7 +87,7 @@ for ite = 1 : Par.IteNum
         % soft threshold
         alphanew = sign(bnew).*max(abs(bnew)-lambdae,0);
         % add DC components and aggregation
-        Y_hat(:,blk_arr(:,idx)) = Y_hat(:,blk_arr(:,idx)) + bsxfun(@plus, Dnew*alphanew, DC(:,idx)); % not DC(:,blk_arr(:,idx))
+        Y_hat(:,blk_arr(:,idx)) = Y_hat(:,blk_arr(:,idx)) + bsxfun(@plus, Dnew*alphanew, DC(:,blk_arr(:,idx)));
         W_hat(:,blk_arr(:,idx)) = W_hat(:,blk_arr(:,idx)) + ones(Par.ps2ch, length(idx));
     end
     % Reconstruction
